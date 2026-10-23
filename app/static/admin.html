@@ -1,0 +1,25 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MRI-Guard: administrator paneli</title><link rel="stylesheet" href="/style.css"></head>
+<body data-page="admin">
+<header><a class="brand" href="/admin.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.6 12.2-11 14C9.6 27.2 5 22 5 15V7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 16h4l2-4 3 8 2-4h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>MRI-Guard</span></a><div class="who"><span>Administrator paneli</span><button class="ghost" id="logout" type="button">Chiqish</button></div></header>
+<main>
+<div class="stats">
+<div class="stat"><b id="st-doctors">0</b><span>Shifokorlar</span></div>
+<div class="stat"><b id="st-patients">0</b><span>Bemorlar</span></div>
+<div class="stat"><b id="st-scans">0</b><span>Tekshiruvlar</span></div>
+<div class="stat"><b id="st-attacks">0</b><span>Hujum aniqlangan</span></div></div>
+<div id="msg" class="msg hidden" role="alert"></div>
+<section class="panel"><h2>Yangi foydalanuvchi</h2>
+<form id="newUser"><div class="form-row">
+<div><label for="nName">F.I.Sh.</label><input id="nName" required></div>
+<div><label for="nEmail">Elektron pochta</label><input id="nEmail" type="email" required></div>
+<div><label for="nRole">Rol</label><select id="nRole"><option value="doctor">Shifokor</option><option value="patient">Bemor</option></select></div>
+<div><label for="nPass">Parol (bo\u2018sh qoldirilsa avtomatik yaratiladi)</label><input id="nPass" type="password" autocomplete="new-password"></div></div>
+<button type="submit">Hisob yaratish</button></form></section>
+<section class="panel"><h2>Foydalanuvchilar</h2>
+<div class="toolbar"><input id="fq" placeholder="Ism yoki e-pochta bo\u2018yicha qidirish" aria-label="Qidirish"><select id="frole" aria-label="Rol bo\u2018yicha"><option value="">Barcha rollar</option><option value="doctor">Shifokor</option><option value="patient">Bemor</option><option value="admin">Administrator</option></select></div>
+<div class="scroll"><table><thead><tr><th>ID</th><th>F.I.Sh.</th><th>E-pochta</th><th>Rol</th><th>Holat</th><th>Amallar</th></tr></thead><tbody id="userRows"></tbody></table></div></section>
+<section class="panel"><h2>Audit jurnali (oxirgi 100 ta)</h2>
+<div class="scroll"><table><thead><tr><th>Vaqt</th><th>Foydalanuvchi</th><th>Amal</th><th>Tafsilot</th><th>IP</th></tr></thead><tbody id="auditRows"></tbody></table></div></section>
+</main><footer>Administrator amallari audit jurnaliga yoziladi.</footer><script src="/app.js"></script></body></html>

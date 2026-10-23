@@ -1,0 +1,22 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MRI-Guard: shifokor paneli</title><link rel="stylesheet" href="/style.css"></head>
+<body data-page="doctor">
+<header><a class="brand" href="/doctor.html"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.6 12.2-11 14C9.6 27.2 5 22 5 15V7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 16h4l2-4 3 8 2-4h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>MRI-Guard</span></a><div class="who"><span>Shifokor paneli</span><button class="ghost" id="logout" type="button">Chiqish</button></div></header>
+<main>
+<div class="cols">
+<section class="panel"><h2>MRT tasvirini yuklash</h2>
+<form id="uploadForm">
+<label for="patient">Bemor</label><select id="patient" required></select>
+<label for="file">MRT tasvir (PNG yoki JPEG, 10 MB gacha)</label>
+<input id="file" type="file" accept="image/png,image/jpeg" required>
+<button type="submit" id="upBtn">Yuklash va tekshirish</button></form>
+<div id="msg" class="msg hidden" role="alert"></div></section>
+<section class="panel" id="resultPanel"><h2>Tekshiruv natijasi</h2>
+<p class="hint" id="emptyRes">Tasvir yuklangandan keyin tekshiruv bosqichlari shu yerda ko‘rinadi.</p>
+<div id="result"></div></section></div>
+<section class="panel"><h2>Oxirgi tekshiruvlar</h2><div class="scroll"><table>
+<thead><tr><th>Sana</th><th>Bemor</th><th>Natija</th><th>Hujum</th><th>Holat</th><th></th></tr></thead>
+<tbody id="scanRows"></tbody></table></div>
+<p class="hint hidden" id="noScans">Hali tekshiruv yo‘q.</p></section>
+</main><footer>Tizim shifokorga yordam beruvchi vosita. Yakuniy tashxisni shifokor qo‘yadi.</footer><script src="/app.js"></script></body></html>

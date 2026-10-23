@@ -1,0 +1,31 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MRI-Guard: kirish</title><link rel="stylesheet" href="/style.css"></head>
+<body data-page="login">
+<div class="auth">
+<aside class="auth-side">
+<svg class="rings" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.5"><circle cx="100" cy="100" r="95"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="49"/><circle cx="100" cy="100" r="26"/></g></svg>
+<div class="auth-top"><a class="brand" href="/"><svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.6 12.2-11 14C9.6 27.2 5 22 5 15V7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.5 16h4l2-4 3 8 2-4h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>MRI-Guard</span></a>
+<h1>Miya MRT tasvirlari hujumdan himoyalangan holda tahlil qilinadi</h1>
+<ul class="points"><li>Adversarial hujum aniqlanadi va tasvir tozalanadi</li><li>Natija bemorga faqat shifokor tasdig‘idan keyin yetadi</li><li>Har bir harakat audit jurnaliga yoziladi</li></ul></div>
+<p class="fine">Magistrlik dissertatsiyasi loyihasi · Andijon davlat universiteti</p>
+</aside>
+<div class="auth-main"><div class="login">
+<h2 class="auth-title">Tizimga kirish</h2>
+<form id="loginForm">
+<label for="email">Elektron pochta</label><input id="email" type="email" autocomplete="username" required>
+<label for="password">Parol</label><input id="password" type="password" autocomplete="current-password" required>
+<label for="totp">2FA kodi</label><input id="totp" inputmode="numeric" autocomplete="one-time-code" maxlength="6">
+<p class="hint">2FA yoqilgan bo‘lsagina to‘ldiring.</p>
+<button type="submit">Kirish</button></form>
+<button class="link" id="showReg" type="button">Bemor sifatida ro‘yxatdan o‘tish</button>
+<form id="regForm" class="hidden">
+<h2 class="reg-title">Bemor hisobini yaratish</h2>
+<label for="rname">F.I.Sh.</label><input id="rname" required>
+<label for="remail">Elektron pochta</label><input id="remail" type="email" required>
+<label for="rpass">Parol</label><input id="rpass" type="password" autocomplete="new-password" required>
+<p class="hint">Kamida 12 belgi, harf va raqam bilan.</p>
+<button type="submit">Hisob yaratish</button></form>
+<div id="msg" class="msg hidden" role="alert"></div>
+</div></div></div>
+<script src="/app.js"></script></body></html>

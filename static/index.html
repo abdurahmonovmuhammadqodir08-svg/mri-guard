@@ -1,0 +1,24 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MRI-Guard: kirish</title><link rel="stylesheet" href="/style.css"></head>
+<body data-page="login">
+<header><span class="brand">MRI-Guard</span></header>
+<main><section class="panel login">
+<h1>Tizimga kirish</h1>
+<p class="hint">Miya MRT tasvirlarini adversarial hujumlardan himoyalangan holda tahlil qiluvchi tizim.</p>
+<form id="loginForm">
+<label for="email">Elektron pochta</label><input id="email" type="email" autocomplete="username" required>
+<label for="password">Parol</label><input id="password" type="password" autocomplete="current-password" required>
+<label for="totp">2FA kodi</label><input id="totp" inputmode="numeric" autocomplete="one-time-code" maxlength="6">
+<p class="hint">2FA yoqilgan bo'lsagina to'ldiring.</p>
+<button type="submit">Kirish</button></form>
+<button class="link" id="showReg" type="button">Bemor sifatida ro'yxatdan o'tish</button>
+<form id="regForm" class="hidden">
+<h2>Bemor hisobini yaratish</h2>
+<label for="rname">F.I.Sh.</label><input id="rname" required>
+<label for="remail">Elektron pochta</label><input id="remail" type="email" required>
+<label for="rpass">Parol</label><input id="rpass" type="password" autocomplete="new-password" required>
+<p class="hint">Kamida 12 belgi, harf va raqam bilan.</p>
+<button type="submit">Hisob yaratish</button></form>
+<div id="msg" class="msg hidden" role="alert"></div>
+</section></main><script src="/app.js"></script></body></html>
