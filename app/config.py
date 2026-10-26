@@ -1,6 +1,6 @@
 import os
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "")
+SECRET_KEY = os.environ.get("SECRET_KEY", "abdurahmonovmuhammadqodirdilshodbekoglimuhammadqodir20092002")
 if len(SECRET_KEY) < 32:
     raise RuntimeError("SECRET_KEY kamida 32 belgidan iborat bo'lishi shart (.env faylini tekshiring)")
 
